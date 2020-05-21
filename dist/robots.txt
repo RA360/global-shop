@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /ajax/
+Disallow: /assets/
+Disallow: /db
+
+Host: https://global-shop-9aff5.web.app

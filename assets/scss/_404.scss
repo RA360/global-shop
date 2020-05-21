@@ -1,0 +1,123 @@
+.empty {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+  &__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eee;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: -0.5px;
+      transform: translateY(-160px);
+      height: 160px;
+      width: 2px;
+      background: #00ffc0;
+    }
+
+    &:nth-of-type(1) {
+      left: 20%;
+
+      &::after {
+        animation: drop 3s infinite linear;
+        animation-delay: 0.2s;
+      }
+    }
+
+    &:nth-of-type(2) {
+      left: 40%;
+
+      &::after {
+        animation: drop 2s infinite linear;
+        animation-delay: 0.7s;
+      }
+    }
+
+    &:nth-of-type(3) {
+      left: 60%;
+
+      &::after {
+        animation: drop 3s infinite linear;
+        animation-delay: 0.9s;
+      }
+    }
+
+    &:nth-of-type(4) {
+      left: 80%;
+
+      &::after {
+        animation: drop 2s infinite linear;
+        animation-delay: 1.2s;
+      }
+    }
+  }
+
+  &__box {
+    width: 542px;
+    color: #000;
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  &__offer {
+    font-size: 188px;
+    text-shadow: 4px 4px 0px #00ffc0;
+    letter-spacing: 0.02em;
+  }
+
+  &__subtitle {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    display: block;
+    margin-top: -27px;
+  }
+
+  &__txt {
+    font: 16px "Work Sans", sans-serif;
+    margin-top: 20px;
+  }
+
+  &__btn {
+    width: 150px;
+    padding: 9px 0 10px;
+    display: block;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 0px 2px #000, 2px 2px 0px 2px #00ffc0;
+    transition: all 0.3s ease;
+    margin: 25px auto 0;
+
+    &:hover {
+      background: #00ffc0;
+      box-shadow: 0px 0px 0px 2px #00ffc0;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  &__social {
+    width: 40px;
+    margin: 0 7px;
+  }
+}
+
+@keyframes drop {
+  90% {
+    height: 20px;
+  }
+
+  100% {
+    height: 160px;
+    transform: translateY(calc(100vh + 160px));
+  }
+}
